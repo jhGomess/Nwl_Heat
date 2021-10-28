@@ -54,9 +54,31 @@ main {
 
 h1 {
   font-size: 1.5rem;
+
+  margin-top: 1.5rem;
 }
 
 a {
-  color: black;
+  color: var(--grey);
   text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
 }

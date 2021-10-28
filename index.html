@@ -25,35 +25,57 @@
             alt="Foto Pessoal"
           />
         </div>
-        <h1>Jhuan Gomes</h1>
+        <h1 id="userName">Jhuan Gomes</h1>
         <a href="https://github.com/jhGomess" target="_blank">
           <img src="/images/github.svg" alt="ícone github" />
           jhGomess</a
         >
 
         <p>An instructor focused on helping pople start programming for web</p>
-
-        <li>
-          <a href="https://youtube.com/RocketSeat" target="_blank">
-            <img src="/images/youtube.svg" alt="icone youtube" />
-          </a>
-        </li>
-        <li>
-          <a href="https://instagram.com/jh_gomess" target="_blank">
-            <img src="/images/instagram.svg" alt="icone instagram" />
-          </a>
-        </li>
-        <li>
-          <a href="https://facebook.com/JhuanCalenta" target="_blank">
-            <img src="/images/facebook.svg" alt="icone facebook" />
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/jh_gomess" target="_blank">
-            <img src="/images/twitter.svg" alt="icone twitter" />
-          </a>
-        </li>
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="https://youtube.com/RocketSeat" target="_blank">
+              <img src="/images/youtube.svg" alt="icone youtube" />
+            </a>
+          </li>
+          <li class="instagram">
+            <a href="https://instagram.com/maykbrito" target="_blank">
+              <img src="/images/instagram.svg" alt="icone instagram" />
+            </a>
+          </li>
+          <li class="facebook">
+            <a href="https://facebook.com/maykbrito" target="_blank">
+              <img src="/images/facebook.svg" alt="icone facebook" />
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="https://twitter.com/maykbrito" target="_blank">
+              <img src="/images/twitter.svg" alt="icone twitter" />
+            </a>
+          </li>
+        </ul>
       </div>
     </main>
+    <script>
+      const linksSocialMedia = {
+        github: "jhgomess",
+        youtube: "RocketSeat",
+        facebook: "RocketSeat",
+        instagram: "jh_gomess",
+        twitter: "jh_gomess",
+      };
+      function changeSocialMediaLinks() {
+        userName.textContent = "jh";
+
+        for (li of socialLinks.children) {
+          const social = li.getAttribute("class");
+
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`;
+
+          alert(li.children[0].href);
+        }
+      }
+      changeSocialMediaLinks();
+    </script>
   </body>
 </html>
