@@ -56,26 +56,6 @@
         </ul>
       </div>
     </main>
-    <script>
-      const linksSocialMedia = {
-        github: "jhgomess",
-        youtube: "RocketSeat",
-        facebook: "RocketSeat",
-        instagram: "jh_gomess",
-        twitter: "jh_gomess",
-      };
-      function changeSocialMediaLinks() {
-        userName.textContent = "jh";
-
-        for (li of socialLinks.children) {
-          const social = li.getAttribute("class");
-
-          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`;
-
-          alert(li.children[0].href);
-        }
-      }
-      changeSocialMediaLinks();
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
