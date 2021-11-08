@@ -20,9 +20,15 @@ body {
 }
 
 main {
-  background: url(images/background.png);
-  width: 375px;
-  height: 812px;
+  background: url(images/background.png) no-repeat center/cover;
+  width: 100vw;
+  height: 100vh;
+  min-height: 812px;
+}
+
+.faixa img {
+  width: 0px;
+  height: 0px;
 }
 
 .container {
@@ -40,6 +46,8 @@ main {
 }
 
 .avatar span {
+  width: 80px;
+  height: 80px;
   position: absolute;
   top: -15px;
   z-index: 1;
@@ -81,4 +89,60 @@ ul {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
+}
+
+@media screen and (min-width: 960px) {
+  body {
+    background: url(./images/desktop.png) no-repeat center/cover;
+    background-color: #121214;
+  }
+  main {
+    width: 320px;
+    height: 500px;
+    min-height: 540px;
+  }
+  .faixa {
+    text-align: center;
+  }
+
+  .faixa img {
+    width: 64px;
+    height: 158px;
+    margin-top: -140px;
+    margin-bottom: -7px;
+  }
+  .quebra {
+    width: 80px;
+    height: 8px;
+    background: black;
+    margin: auto;
+    margin-bottom: 0px;
+  }
+
+  .avatar {
+    margin: 3rem auto 0;
+  }
+  .avatar span {
+    top: -18px;
+  }
+
+  .avatar > img {
+    width: 9.5rem;
+    height: 11rem;
+  }
+  h1 {
+    font-size: 1.2rem;
+
+    margin-top: 0.5rem;
+  }
+  a {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+  ul {
+    margin-top: 1.5rem;
+  }
 }
